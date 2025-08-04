@@ -1,0 +1,75 @@
+C:\Users\Admin>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 2409:40c2:101a:8076:4cfb:cb35:6e64:eaae
+   Temporary IPv6 Address. . . . . . : 2409:40c2:101a:8076:e057:e62e:bd59:a0d2
+   Link-local IPv6 Address . . . . . : fe80::7629:f703:a08b:de8c%4
+   IPv4 Address. . . . . . . . . . . : 10.174.146.34
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::d07d:55ff:fed8:b9b1%4
+                                       10.174.146.22
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\Admin>nmap -sS 10.174.146.0/24
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-04 18:55 +0530
+Nmap scan report for 10.174.146.22
+Host is up (0.011s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: D2:7D:55:D8:B9:B1 (Unknown)
+
+Nmap scan report for 10.174.146.34
+Host is up (0.00024s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 88.42 seconds
+
+C:\Users\Admin>  nmap -sS 10.174.146.0/24 -oN scan_results.txt
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-04 18:59 +0530
+Nmap scan report for 10.174.146.22
+Host is up (0.012s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: D2:7D:55:D8:B9:B1 (Unknown)
+
+Nmap scan report for 10.174.146.34
+Host is up (0.00092s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 95.00 seconds
